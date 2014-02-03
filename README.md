@@ -24,3 +24,39 @@ Then in your HTML form you can use it with the `multi-select` directive:
             right-title="Title of right box"
         ></multi-select>
 ```
+
+-----------------------
+
+So a full example:
+
+In the controller:
+
+```javascript
+app.controller("MyCtrl", ['$scope', function($scope) {
+    $scope.defaultItems = [
+        1, 4
+    ];
+    $scope.listOfItems = {
+        1: 'Apples',
+        2: 'Oranges',
+        3: 'Peaches',
+        4: 'Bananas',
+        5: 'Lemons',
+        ...
+    }
+}]);
+```
+
+In the template:
+
+```html
+<div ng-controller="MyCtrl">
+    <multi-select default="defaultItems"
+            items="listOfItems"
+            left-title="Unpicked Fruits"
+            right-title="Fruits in the barrel"
+        ></multi-select>
+</div>
+```
+
+[Demo](http://example.com/#this-is-the-demo)
