@@ -59,4 +59,4 @@ In the template:
 </div>
 ```
 
-[Demo](http://example.com/#this-is-the-demo)
+[Demo](http://qwertynl.github.io/AngularJS-Switcharoo/switchDemo.html)
