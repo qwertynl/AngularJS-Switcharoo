@@ -6,7 +6,7 @@ var switcharoo = angular.module('switcharoo', []).directive('multiSelect', funct
         restrict: 'E',
         scope: {
             items: '=',
-            list: '=',
+            default: '=',
             leftTitle: '@',
             rightTitle: '@'
         },
