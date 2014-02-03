@@ -11,7 +11,7 @@
     .switchBox .entBox div:hover {
         background-color: #908f8f;
     }
-    .switchBox #eBox2.entBox {
+    .switchBox .eBox2.entBox {
         background-color: #ccc9c9;
     }
 </style>
@@ -24,12 +24,12 @@
         </tr>
         <tr class="switchBox">
             <td>
-                <div id="eBox1" class="entBox">
+                <div class="entBox eBox1">
                     <switchitem ng-repeat="(key, value) in items" ng-if="default.indexOf(key) == -1" value="value" ng-click="switchItem(key)"></switchitem>
                 </div>
             </td>
             <td>
-                <div id="eBox2" class="entBox">
+                <div class="entBox eBox2">
                     <switchitem ng-repeat="(key, value) in items" ng-if="default.indexOf(key) > -1" value="value" ng-click="switchItem(key)"></switchitem>
                 </div>
             </td>
