@@ -34,7 +34,7 @@ In the controller:
 ```javascript
 app.controller("MyCtrl", ['$scope', function($scope) {
     $scope.defaultItems = [
-        1, 4
+        "1", "4"
     ];
     $scope.listOfItems = {
         1: 'Apples',
