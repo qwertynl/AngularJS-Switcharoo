@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>Angularjs-switcharoo by qwertynl</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Angularjs-switcharoo</h1>
+        <h2>A multi-select plugin for Angular JS</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/qwertynl/AngularJS-Switcharoo/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/qwertynl/AngularJS-Switcharoo/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/qwertynl/AngularJS-Switcharoo" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a name="angularjs-switcharoo" class="anchor" href="#angularjs-switcharoo"><span class="octicon octicon-link"></span></a>AngularJS-Switcharoo</h1>
+
+<p>A multi-select plugin for Angular JS</p>
+
+<p>Use this wrapper if you want to expand the power of your multiple select box.</p>
+
+<h1>
+<a name="basic-usage" class="anchor" href="#basic-usage"><span class="octicon octicon-link"></span></a>Basic Usage</h1>
+
+<p>Remember to add it to your app:</p>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s2">"myApp"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"switcharoo"</span><span class="p">]);</span>
+</pre></div>
+
+<p>Then in your HTML form you can use it with the <code>multi-select</code> directive:</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;multi-select</span> <span class="na">default=</span><span class="s">"&lt;array of default selected items&gt;"</span>
+            <span class="na">items=</span><span class="s">"&lt;object with items in `key:value` format&gt;"</span>
+            <span class="na">left-title=</span><span class="s">"Title of left box"</span>
+            <span class="na">right-title=</span><span class="s">"Title of right box"</span>
+        <span class="nt">&gt;&lt;/multi-select&gt;</span>
+</pre></div>
+
+<hr><p>So a full example:</p>
+
+<p>In the controller:</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">app</span><span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s2">"MyCtrl"</span><span class="p">,</span> <span class="p">[</span><span class="s1">'$scope'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$scope</span><span class="p">.</span><span class="nx">defaultItems</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span>
+    <span class="p">];</span>
+    <span class="nx">$scope</span><span class="p">.</span><span class="nx">listOfItems</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="o">:</span> <span class="s1">'Apples'</span><span class="p">,</span>
+        <span class="mi">2</span><span class="o">:</span> <span class="s1">'Oranges'</span><span class="p">,</span>
+        <span class="mi">3</span><span class="o">:</span> <span class="s1">'Peaches'</span><span class="p">,</span>
+        <span class="mi">4</span><span class="o">:</span> <span class="s1">'Bananas'</span><span class="p">,</span>
+        <span class="mi">5</span><span class="o">:</span> <span class="s1">'Lemons'</span><span class="p">,</span>
+        <span class="p">...</span>
+    <span class="p">}</span>
+<span class="p">}]);</span>
+</pre></div>
+
+<p>In the template:</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">ng-controller=</span><span class="s">"MyCtrl"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;multi-select</span> <span class="na">default=</span><span class="s">"defaultItems"</span>
+            <span class="na">items=</span><span class="s">"listOfItems"</span>
+            <span class="na">left-title=</span><span class="s">"Unpicked Fruits"</span>
+            <span class="na">right-title=</span><span class="s">"Fruits in the barrel"</span>
+        <span class="nt">&gt;&lt;/multi-select&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p><a href="http://example.com/#this-is-the-demo">Demo</a></p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
