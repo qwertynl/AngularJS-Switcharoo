@@ -1,0 +1,38 @@
+<style>
+    .switchBox .entBox {
+        overflow:auto;height:8em; width:190px;border:1px solid black;float:left;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+    .switchBox#edit .entBox div:hover {
+        background-color: #908f8f;
+    }
+    .switchBox #eBox2.entBox, #edit #eBox4.entBox {
+        background-color: #ccc9c9;
+    }
+</style>
+
+<label>
+    <table>
+        <tr>
+            <th>{{leftTitle}}</th>
+            <th>{{rightTitle}}</th>
+        </tr>
+        <tr class="switchBox">
+            <td>
+                <div id="eBox1" class="entBox">
+                    <switchitem ng-repeat="(key, value) in list" ng-if="items.indexOf(key) == -1" value="value" ng-click="switchItem(key)"></switchitem>
+                </div>
+            </td>
+            <td>
+                <div id="eBox2" class="entBox">
+                    <switchitem ng-repeat="(key, value) in list" ng-if="items.indexOf(key) > -1" value="value" ng-click="switchItem(key)"></switchitem>
+                </div>
+            </td>
+        </tr>
+    </table>
+</label>
