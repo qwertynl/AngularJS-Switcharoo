@@ -1,4 +1,4 @@
-var app = app.module("myApp", ["switcharoo"]);
+var app = angular.module("myApp", ["switcharoo"]);
 
 app.controller("MyCtrl", ['$scope', function($scope) {
     $scope.defaultItems = [
