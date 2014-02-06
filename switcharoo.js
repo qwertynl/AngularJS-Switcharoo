@@ -6,22 +6,25 @@ var switcharoo = angular.module('switcharoo', []).directive('multiSelect', funct
         restrict: 'E',
         scope: {
             items: '=',
-            default: '=',
+            selected: '=',
             leftTitle: '@',
             rightTitle: '@'
         },
         templateUrl: "switcharoo.html",
         link: function(scope)   {
             scope.switchItem = function(item)   {
-                var index = scope.default.indexOf(item);
+                var index = scope.selected.indexOf(item);
                 if(index == -1) {
                     //add it in
-                    scope.default.push(item);
+                    scope.selected.push(item);
                 }
                 else    {
                     //remove it
-                    scope.default.splice(index, 1);
+                    scope.selected.splice(index, 1);
                 }
+            }
+            scope.isSelected = function(item){
+                return (scope.selected.indexOf(item) > -1);
             }
         }
     };
