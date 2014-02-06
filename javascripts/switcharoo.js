@@ -10,7 +10,7 @@ var switcharoo = angular.module('switcharoo', []).directive('multiSelect', funct
             leftTitle: '@',
             rightTitle: '@'
         },
-        templateUrl: "js/apps/templates/switcharoo.html",
+        templateUrl: "templates/switcharoo.html",
         link: function(scope)   {
             scope.switchItem = function(item)   {
                 var index = scope.selected.indexOf(item);
