@@ -25,12 +25,12 @@
         <tr class="switchBox">
             <td>
                 <div class="entBox eBox1">
-                    <switchitem ng-repeat="(key, value) in items" ng-if="default.indexOf(key) == -1" value="value" ng-click="switchItem(key)"></switchitem>
+                    <switchitem ng-repeat="(key, value) in items" ng-if="!isSelected(key)" value="value" ng-click="switchItem(key)"></switchitem>
                 </div>
             </td>
             <td>
                 <div class="entBox eBox2">
-                    <switchitem ng-repeat="(key, value) in items" ng-if="default.indexOf(key) > -1" value="value" ng-click="switchItem(key)"></switchitem>
+                    <switchitem ng-repeat="(key, value) in items" ng-if="isSelected(key)" value="value" ng-click="switchItem(key)"></switchitem>
                 </div>
             </td>
         </tr>
