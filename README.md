@@ -18,7 +18,7 @@ var app = app.module("myApp", ["switcharoo"]);
 Then in your HTML form you can use it with the `multi-select` directive:
 
 ```html
-<multi-select default="<array of default selected items>"
+<multi-select selected="<array of default selected items>"
             items="<object with items in `key:value` format>"
             left-title="Title of left box"
             right-title="Title of right box"
@@ -33,7 +33,7 @@ In the controller:
 
 ```javascript
 app.controller("MyCtrl", ['$scope', function($scope) {
-    $scope.defaultItems = [
+    $scope.selectedItems = [
         "1", "4"
     ];
     $scope.listOfItems = {
@@ -51,7 +51,7 @@ In the template:
 
 ```html
 <div ng-controller="MyCtrl">
-    <multi-select default="defaultItems"
+    <multi-select default="selectedItems"
             items="listOfItems"
             left-title="Unpicked Fruits"
             right-title="Fruits in the barrel"
