@@ -13,14 +13,14 @@ var switcharoo = angular.module('switcharoo', []).directive('multiSelect', funct
         templateUrl: "switcharoo.html",
         link: function(scope)   {
             scope.switchItem = function(item)   {
-                var index = scope.items.indexOf(item);
+                var index = scope.default.indexOf(item);
                 if(index == -1) {
                     //add it in
-                    scope.items.push(item);
+                    scope.default.push(item);
                 }
                 else    {
                     //remove it
-                    scope.items.splice(index, 1);
+                    scope.default.splice(index, 1);
                 }
             }
         }
