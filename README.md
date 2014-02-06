@@ -51,7 +51,7 @@ In the template:
 
 ```html
 <div ng-controller="MyCtrl">
-    <multi-select default="selectedItems"
+    <multi-select selected="selectedItems"
             items="listOfItems"
             left-title="Unpicked Fruits"
             right-title="Fruits in the barrel"
